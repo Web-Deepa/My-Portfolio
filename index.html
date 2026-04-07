@@ -4,418 +4,345 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
-          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-
-    <link rel="stylesheet" href="style.css">     
-    
-     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-
-   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
-    crossorigin="anonymous"></script>
-     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1474823514000654"
-     crossorigin="anonymous"></script>
-
-
-    <script src="scripts.js" defer></script>
-
-</head> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</head>
 <body>
 
-  <!--navbar-->
-  <nav class=" fixed-top shadow  d-flex justify-content-between align-items-center px-4 py-2 bg-warning ">
-    
-        <ul class="nav-links  ">
-           <li >
-            <a class="nav-name text-dark" >Deepa</a>
-          </li>
-          <li >
-            <a  href="#hero">Home</a>
-          </li>
-          <li >
-            <a href="#about">About</a>
-          </li>
-          <li >
-            <a  href="#skills">Skills</a>
-          </li>
-          <li >
-            <a  href="#projects">Projects</a>
-          </li>
-          <li >
-            <a  href="#contact">Contact</a>
-          </li>
-  <ul>
+  <!-- Navbar -->
+  <nav class="fixed-top bg-white shadow py-2 border-bottom border-black">
+    <div class="container d-flex justify-content-between align-items-center">
+      <span class="nav-name">DEEPA</span>
+      <button id="menu-toggle" class="menu-toggle" aria-label="Toggle navigation menu">☰</button>
+      <ul class="nav-links mb-0">
+        <li><a href="#hero" class="nav-link" onclick="showSection('hero')">Home</a></li>
+        <li><a href="#about" class="nav-link" onclick="showSection('about')">About</a></li>
+        <li><a href="#skills" class="nav-link" onclick="showSection('skills')">Skills</a></li>
+        <li><a href="#projects" class="nav-link" onclick="showSection('projects')">Projects</a></li>
+        <li><a href="#contact" class="nav-link" onclick="showSection('contact')">Contact</a></li>
+      </ul>
+    </div>
+
+    <!-- Mobile Dropdown Menu -->
+    <div id="mobile-menu">
+      <a href="#hero" onclick="showSection('hero')">Home</a>
+      <a href="#about" onclick="showSection('about')">About</a>
+      <a href="#skills" onclick="showSection('skills')">Skills</a>
+      <a href="#projects" onclick="showSection('projects')">Projects</a>
+      <a href="#contact" onclick="showSection('contact')">Contact</a>
+    </div>
   </nav>
-           
-  <!--home -->
-     <section class="hero  bg-light" id="hero">
-         <div class="hero-image my-4 pt-4">
-               <img src="images/profile.png"  class="bg-white" alt="Profile Picture">
-            </div>
-        <div class="hero-content my-4">
-            <h1>Hi, I am <span class="highlight">Deepa Paneru</span></h1>
-            <h2> A Computer Engineering Student</h2>
-            <p>I am passionate to software development,problem solving and web technology.</p>
 
-          
-        
-                <button class="btn btn-primary">
-              
-                <a href="https://www.linkedin.com/in/uniquedeepa" target="_blank" style="color: inherit; text-decoration: none; " >Hire Me</a>
-           </button>
-          
-        
-              <button class="btn btn-primary ms-3" onclick="window.open('deeparesume.pdf')">
-    Download CV <i class="fas fa-file-alt"></i>
-</button>
-   <div class="social-icons ms-3 my-2">
-                <a href="https://github.com/Web-Deepa"><i class="fab fa-github mx-1"></i></a>
-                <a href="https://www.linkedin.com/in/web-Deepa"><i class="fab fa-linkedin mx-1"></i></a>
-             <a href="https://www.leetcode.com/yourfrienddeepa"><i class="fas fa-code mx-1"></i></a>
-                <a href="https://twitter.com/yourfrienddeepa"><i class="fab fa-twitter mx-1"></i></a>
-
-</div>
-</section>
-
-<!--about-->
-<section id="about" class="bg-light">
-  <div class="container my-2">
-    <h2 class="text-center mb-4"> <u>About  Me</u></h2>
-    <div class="row ">
-     
-      <div class="col-md-6 border p-4 bg-white shadow">
-        <h2 class="text-center my-3">Introduction</h2>
-        <p>Hello! I'm Deepa Paneru, a dedicated Computer Engineering student at National Academy of Science and Technology(NAST) 
-          under Pokhara University
-           with a passion for software development and web technologies.
-           I love solving complex problems and creating efficient solutions through coding.
-            My journey in tech has been fueled by curiosity and a desire to innovate.</p>
-            
-        <p>When I'm not coding, I enjoy exploring new technologies, contributing to open-source projects, 
-          and engaging with the developer community. 
-          I'm always eager to learn and grow in this ever-evolving field.</p>
-
-          <p>I love reading books like literature, science fiction, psychology,religious ,historical and technology articles.</p>
-      </div>
-      <div class="col-md-5 border p-4 bg-white shadow ms-3">
-        <h2 class="text-center my-3 ">My Coding journey</h2>
-        <p>My journey in technology began at class 11 in 2021 from C as a computer science student.
-          I gradually moved towards programming and web development using HTML, CSS, and JavaScript, PHP.
+  <!-- Hero -->
+  <section id="hero" class="bg-light">
+    <div class="container">
+      <div class="row align-items-center gy-4">
+        <div class="col-md-6">
+          <h2 class="animated-heading">
+            <span>Hello</span>
+            <span>Everyone!</span>
+          </h2>
+          <h4>I am Deepa Paneru</h4>
+          <p class="mt-3">
+            A Computer Engineering Student.<br>
+            Passionate about web development, problem solving, AI and data science.
           </p>
-          <P>
-            After that, I learned object oriented programming languages like  C++,  Java and  Python.
-            I also delved into frameworks like Bootstrap  to enhance my web development
-            With each line of code, I discovered the joy of bringing ideas to life and creating interactive experiences.
-            
-          </P>
-        </p>
+          <div class="hero-btns mt-3">
+            <button class="btn btn-primary" onclick="scrollToSection('projects')">
+              View My Works <i class="fa-solid fa-arrow-right"></i>
+            </button>
+            <button class="btn btn-primary" onclick="window.open('CV.pdf')">
+              Download CV <i class="fa-solid fa-file-pdf"></i>
+            </button>
+          </div>
+          <p class="mt-3">Welcome to my portfolio! Let's explore my work together!</p>
+        </div>
+        <div class="col-md-6 home-photo">
+          <img src="images/ps.jpeg" alt="Profile Picture" class="img-fluid">
+        </div>
       </div>
-  </div>
-</section>
+    </div>
+  </section>
 
-<!--skills  -->
-<section id="skills" class="bg-light">
-  <div class="container my-2">  
-    <h2 class="text-center mb-4"><u>Skills</u></h2>
-    <div class="row">
-      <div class="col-md-5 border p-4 bg-white shadow mx-3">
-        
-        <h3 class=" mb-3"> <i class="fas fa-code "></i>Frontend Development</h3>
-    <div class="mb-3">
-  <h5>HTML</h5>
-  <div class="progress"  style="height: 10px ;" aria-label="HTML skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 90%">90%</div>
-  </div>
-</div>
-          <div class="mb-3">
-  <h5>CSS</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="CSS skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 70%">70%</div>
-  </div>
-</div>
-          <div class="mb-3">
-  <h5>Tailwind CSS</h5>
-  <div class="progress" style="height: 10px ;"role="progressbar" aria-label="Tailwind CSS skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 60%">60%</div>
-  </div>
-</div>
-          <div class="mb-3">
-  <h5>JavaScript</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="JavaScript skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 65%">65%</div>
-  </div>
-</div>
-         <div class="mb-3">
-  <h5>Bootstrap</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="Bootstrap skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 90%">90%</div>
-  </div>
-</div>
+  <!-- About -->
+  <section id="about" class="bg-light">
+    <div class="container">
+      <h2 class="text-center my-3">About Me</h2>
+      <p>
+        I'm Deepa Paneru, a dedicated Computer Engineering student at National Academy of Science and Technology (NAST)
+        under Pokhara University with a passion for software development, AI, data science and web technologies.
+        I love solving complex problems and creating efficient solutions through coding.
+      </p>
+      <div class="row align-items-center gy-4 mt-3">
+        <div class="col-md-6">
+          <h3 class="text-center my-3">My Educational Journey</h3>
+          <ul class="edu-list">
+            <li>
+              <h5>Secondary Education</h5>
+              <p>2011–2021 &mdash; Shree Janata Rastriya Secondary School, Dhangadhi-13 Kailali Gaun</p>
+            </li>
+            <li>
+              <h5>Higher Secondary Education</h5>
+              <p>2021–2023 &mdash; NAST Secondary School, Uttarbehadi-04 Dhangadhi, Kailali</p>
+            </li>
+            <li>
+              <h5>Undergraduate Education</h5>
+              <p>2023–Present &mdash; National Academy of Science and Technology (NAST) under Pokhara University, Dhangadhi, Kailali</p>
+            </li>
+          </ul>
+        </div>
+        <div class="col-md-6">
+          <div class="about-img">
+            <img src="images/profile.jpg" class="img-fluid about-img" alt="Profile Picture">
+          </div>
+        </div>
       </div>
-      <div class="col-md-5 border p-4 bg-white shadow mx-3">
-        <h3 class=" mb-3">
-          <i class="fas fa-database mx-1"></i>Backend Development</h3>
-      
-           <div class="mb-3">
-  <h5>C/C++</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="C/C++ skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 85%">85%</div>
-  </div>
-</div>
-           <div class="mb-3">
-  <h5>Java</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="Java skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 70%">70%</div>
-  </div>
-</div>
-            <div class="mb-3">
-  <h5>PHP</h5>
-  <div class="progress"  style="height: 10px ;" role="progressbar" aria-label="PHP skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 60%">60%</div>
-  </div>
-</div>
-          <div class="mb-3">
-  <h5>MySQL</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="MySQL skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 70%">70%</div>
-  </div>
-</div>
-  <div class="mb-3">
-  <h5>Python</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="Python skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 70%">70%</div>
-  </div>
-</div>
-      </div>
-      <div class="col-md-5 border p-4 my-4 bg-white shadow mx-3">
-        <h3 class=" mb-3">
-          <i class="fas fa-tools"></i>
-          Tools & Technologies</h3>
-         <div class="mb-3">
-  <h5>LeetCode</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="LeetCode skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 90%">65%</div>
-  </div>
-</div>
-  <div class="mb-3">
-  <h5>VS Code</h5>
-  <div class="progress " style="height: 10px ;" role="progressbar" aria-label="VS Code skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 90%">70%</div>
-  </div>
-</div>
-    <div class="mb-3">
-  <h5>Git and Github</h5>
-  <div class="progress" style="height: 10px ;" role="progressbar" aria-label="Git and Github skill progress" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100">
-    <div class="progress-bar bg-primary h-1" style="width: 90%">60%</div>
-  </div>
-</div>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="bg-light">
+    <div class="container">
+      <h1 class="text-center mb-4">My Skills</h1>
+      <div class="row gy-4">
+
+        <!-- Frontend -->
+        <div class="col-md-5 col-12">
+          <div class="skill-card border border-black p-4 bg-white shadow">
+            <h3 class="mb-3"><i class="fas fa-code"></i> Frontend Development</h3>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>HTML</h5><span class="skill-percent">60%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="60%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>CSS</h5><span class="skill-percent">50%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="50%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Tailwind CSS</h5><span class="skill-percent">40%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="40%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>JavaScript</h5><span class="skill-percent">50%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="50%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Bootstrap</h5><span class="skill-percent">40%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="40%" style="width:0%"></div></div></div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="col-md-5 col-12">
+          <div class="skill-card border border-black p-4 bg-white shadow">
+            <h3 class="mb-3"><i class="fas fa-database"></i> Backend Development</h3>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>C/C++</h5><span class="skill-percent">80%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="80%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Java</h5><span class="skill-percent">50%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="50%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>PHP</h5><span class="skill-percent">60%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="60%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>MySQL</h5><span class="skill-percent">50%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="50%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Python</h5><span class="skill-percent">40%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="40%" style="width:0%"></div></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="col-md-5 col-12">
+          <div class="skill-card border border-black p-4 bg-white shadow">
+            <h3 class="mb-3"><i class="fas fa-tools"></i> Tools & Technologies</h3>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>LeetCode</h5><span class="skill-percent">30%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="30%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>VS Code</h5><span class="skill-percent">60%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="60%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Git & GitHub</h5><span class="skill-percent">50%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="50%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Figma</h5><span class="skill-percent">60%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="60%" style="width:0%"></div></div></div>
+          </div>
+        </div>
+
+        <!-- Professional -->
+        <div class="col-md-5 col-12">
+          <div class="skill-card border border-black p-4 bg-white shadow">
+            <h3 class="mb-3"><i class="fas fa-briefcase"></i> Professional Skills</h3>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Communication</h5><span class="skill-percent">70%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="70%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Teamwork</h5><span class="skill-percent">60%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="60%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Leadership</h5><span class="skill-percent">40%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="40%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Creativity</h5><span class="skill-percent">40%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="40%" style="width:0%"></div></div></div>
+            <div class="mb-3"><div class="d-flex justify-content-between mb-1"><h5>Problem Solving</h5><span class="skill-percent">50%</span></div><div class="progress" style="height:12px"><div class="progress-bar bg-primary" data-width="50%" style="width:0%"></div></div></div>
+          </div>
+        </div>
 
       </div>
     </div>
-    </section>
+  </section>
 
-    <!--projects-->
-    <section id="projects" class="bg-light">  >
-      <div class="container my-2 ">
-        <h2 class="text-center mb-4"><u>Projects</u></h2>
-        <div class="row">
-          <div class="col-md-5 border ms-0 bg-white shadow mx-3 p-0">
-            <img src="images/pong.png" width="500px" height="300px" class="p-0 border-bottom border-black">
-             <h3 class=" mb-3 text-center ">Pong Game</h3>
-            <p class="p-2">A classic Pong game developed using html,css and JavaScript, featuring two-player gameplay and score tracking.</p>
-           <div class="text-center">
-            
-  <button class="btn btn-primary mb-3" onclick="window.open('https://deepapaneru.com.np/Ponggame')">  Live Demo </button>
-</div>
-</div>
-            
-          <div class="col-md-5 border  bg-white shadow mx-3 p-0">
-            <img src="images/portfolio.png" width="500px" height="300px" class="ms-0 border-bottom border-black">
-           <h3 class=" mb-3 text-center">Portfolio Website</h3>
-            <p class="p-2">A personal portfolio website to showcase my skills, projects, and experience using HTML,Bootstrap CSS, and JavaScript.</p>
-          
-  <button class="btn btn-primary mb-4 mx-3 " onclick="window.open('https://deepapaneru.com.np/portfolio')">
-  Live Demo     <i class="fas fa-external-link-alt"></i> </button>
+  <!-- Projects -->
+  <section id="projects" class="bg-light">
+    <div class="container">
+      <h1 class="text-center mb-4">My Projects</h1>
+      <div class="row gy-4">
 
-  <button class="btn btn-primary mb-4 mx-3" onclick="window.open('https://github.com/Deepa1-web/portfolio')"> 
-     GitHub Repo <i class="fab fa-github"></i> </button>
-          </div>
-
-          <div class="col-md-5 border ms-0 bg-white shadow mx-3 my-5 p-0">
-            <img src="images/puzzle.png" width="500px" height="300px" class="p-0 border-bottom border-black">
-             <h3 class=" mb-3 text-center ">Puzzle Game</h3>
-            <p class="p-2">A classic Puzzle game developed using html,css and JavaScript, match two similar color boxes.</p>
-           <div class="text-center">
-
-  <button class="btn btn-primary mb-3" onclick="window.open('https://deepapaneru.com.np/puzzle-game')">  Live Demo </button>
-</div>
-</div>
-
-           
-          <div class="col-md-5 border  bg-white shadow mx-3 my-5 p-0">
-            <img src="images/saymala.png" width="500px" height="300px" class="ms-0 border-bottom border-black">
-           <h3 class=" mb-3 text-center">Saymala Kitchen</h3>
-           <p class="p-2"> A demo Restaurant created by using bootstrap,css anf javascript.A virtual representaion of a food server.</p>
-          
-  <button class="btn btn-primary mb-4 mx-3 " >Under Development     </button>
-
-
-  <button class="btn btn-primary mb-4 mx-3" onclick="window.open('https://github.com/Deepa1-web/Saymala-Kitchen')"> 
-     GitHub Repo <i class="fab fa-github"></i> </button>
-</div>
-
-  
-        </div>
-
-      </div>
-    </section>
-
-    <!--certifications-->
-    <section id="certifications" class="bg-light">
-      <div class="container my-2">
-        <h2 class="text-center mb-4"><u>Certificates</u></h2>
-        <div class="row">
-          <div class="col-md-5 border p-4 bg-white shadow mx-3 p-0">
-            <img src="images/certificate/certi-1.jpg" datafullsrc="images/certificate/certi-1.jpg" width="60px" height="300px" class=" p-0 border-bottom border-black">
-            <h3 class="mb-3"> Git and Github Workshop</h3>
-            <p>Completed Git and GitHub Workshop from NAST IT Club </p>
-          </div>
-          <div class="col-md-5 border p-4 bg-white shadow mx-3 p-0">
-            <img src="images/certificate/certi-2.jpg" datafullsrc="images/certificate/certi-2.jpg" width="60px" height="300px" class=" p-0 border-bottom border-black">
-            <h3 class="mb-3"> Coding Workshop</h3>
-            <p>Completed Coding Workshop from Girls In ICT Nepal under NTA</p>
-          </div>
-          
-        </div>
-      </div>
-    </section>
-
-    <!--contact-->
-    <section id="contact" class=" contact bg-light" >
-      <div class="contact">
-      <div class=" contact-container my-2">
-        <h2 class="text-center mb-4"><u>Get In Touch</u></h2>
-       <div class="row">
-               <div class="col-md-4 border p-4 bg-white shadow mx-4">
-        
-             
-                <h4 class="mb-3 text-center"> Contact Me </h4>
-                
-                <div class="contact-info">
-                  <p><i class="fas fa-phone mx-2"></i> Phone
-                    <br> +977-9763277344</p>
-                  <p><i class="fas fa-envelope mx-2"></i> Email<br>
-                     deepapaneru220@gmail.com</p>
-                  <p><i class="fas fa-map-marker-alt mx-2"></i> Location <br>
-                     Dhangadhi, Kailali, Nepal</p>
-              </div>
-            </div>
-            
-
-          <div class="col-md-6 border p-4 form bg-white shadow ">
-            <form id="contactForm" >
-              <div class="mb-3 ">
-                <h4 class="mb-4">  Have you any query? Feel free to tell me.</h4>
-                <input type="text"   class="form-control text-center"  placeholder=" Name" required>
-              </div>
-              <div class="mb-3">
-
-                <input type="email"    class="form-control text-center"  placeholder="Email" required>
-              </div>
-                 <div class="mb-3">
-
-                <input type="text"   class="form-control text-center"  placeholder="Phone Number" required>
-              </div>
-              <div class="mb-3">
-
-                <textarea class="form-control text-center"  rows="4"  placeholder=" Your Message"></textarea>
-              </div>
+        <div class="col-md-5 col-12">
+          <div class="project-card border border-black bg-white shadow">
+            <img src="images/pong.png" class="project-img" alt="Pong Game">
+            <div class="p-3">
+              <h3 class="text-center mb-2">Pong Game</h3>
+              <p>A classic Pong game developed using HTML, CSS and JavaScript, featuring two-player gameplay and score tracking.</p>
               <div class="text-center">
-                <button type="submit"  class="btn btn-primary " onclick="clearForm()" >Send Message  <i class="fas fa-paper-plane"></i> </button>
-
-                </div>
-                
-                 
-            </form>
+                <button class="btn btn-primary" onclick="window.open('https://deepapaneru.com.np/Ponggame')">Live Demo</button>
+              </div>
             </div>
+          </div>
         </div>
+
+        <div class="col-md-5 col-12">
+          <div class="project-card border border-black bg-white shadow">
+            <img src="images/port.jpeg" class="project-img" alt="Portfolio Website">
+            <div class="p-3">
+              <h3 class="text-center mb-2">Portfolio Website</h3>
+              <p>A personal portfolio website to showcase my skills, projects, and experience using HTML, Bootstrap CSS, and JavaScript.</p>
+              <div class="d-flex flex-wrap gap-2 justify-content-center">
+                <button class="btn btn-primary" onclick="window.open('https://deepapaneru.com.np/portfolio')">Live Demo <i class="fas fa-external-link-alt"></i></button>
+                <button class="btn btn-primary" onclick="window.open('https://github.com/Deepa1-web/portfolio')">GitHub Repo <i class="fab fa-github"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 col-12">
+          <div class="project-card border border-black bg-white shadow">
+            <img src="images/puzzle.png" class="project-img" alt="Puzzle Game">
+            <div class="p-3">
+              <h3 class="text-center mb-2">Puzzle Game</h3>
+              <p>A classic Puzzle game developed using HTML, CSS and JavaScript – match two similar color boxes.</p>
+              <div class="text-center">
+                <button class="btn btn-primary" onclick="window.open('https://deepapaneru.com.np/puzzle-game')">Live Demo</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 col-12">
+          <div class="project-card border border-black bg-white shadow">
+            <img src="images/saymala.png" class="project-img" alt="Saymala Kitchen">
+            <div class="p-3">
+              <h3 class="text-center mb-2">Saymala Kitchen</h3>
+              <p>A demo Restaurant created using Bootstrap, CSS and JavaScript. A virtual representation of a food server.</p>
+              <div class="d-flex flex-wrap gap-2 justify-content-center">
+                <button class="btn btn-secondary" disabled>Under Development</button>
+                <button class="btn btn-primary" onclick="window.open('https://github.com/Deepa1-web/Saymala-Kitchen')">GitHub Repo <i class="fab fa-github"></i></button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-5 col-12">
+          <div class="project-card border border-black bg-white shadow">
+            <img src="images/book.jpeg" class="project-img" alt="Booksagar">
+            <div class="p-3">
+              <h3 class="text-center mb-2">Booksagar</h3>
+              <p>A demo of an online book reading platform. It helps literature lovers find their favorite books freely.</p>
+              <div class="text-center">
+                <button class="btn btn-secondary" disabled>Under Development</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Certifications -->
+  <section id="certifications" class="bg-light">
+    <div class="container">
+      <h1 class="text-center mb-4">My Certificates</h1>
+      <div class="row gy-4">
+        <div class="col-md-5 col-12">
+          <div class="cert-card border border-black bg-white shadow">
+            <img src="images/certificate/certi-1.jpg" class="cert-img" alt="Git Workshop">
+            <h2 class="my-3 text-center px-3">Git and Github Workshop</h2>
+          </div>
+        </div>
+        <div class="col-md-5 col-12">
+          <div class="cert-card border border-black bg-white shadow">
+            <img src="images/certificate/certi-2.jpg" class="cert-img" alt="Coding Workshop">
+            <h2 class="my-3 text-center px-3">Coding Workshop</h2>
+          </div>
+        </div>
+        <div class="col-md-5 col-12">
+          <div class="cert-card border border-black bg-white shadow">
+            <img src="images/certificate/figmacert.jpeg" class="cert-img" alt="Figma Workshop">
+            <h2 class="my-3 text-center px-3">Figma Workshop</h2>
+          </div>
+        </div>
+        <div class="col-md-5 col-12">
+          <div class="cert-card border border-black bg-white shadow">
+            <img src="images/certificate/nast.jpeg" class="cert-img" alt="NAST Scholarship">
+            <h2 class="my-3 text-center px-3">NAST Scholarship</h2>
+          </div>
+        </div>
+        <div class="col-md-5 col-12">
+          <div class="cert-card border border-black bg-white shadow">
+            <img src="images/certificate/pu.jpeg" class="cert-img" alt="PU Scholarship">
+            <h2 class="my-3 text-center px-3">PU Scholarship Letter</h2>
+          </div>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-  <!--footer-->
-  <footer>
-     <div class ="footer-links bg-primary text-white d-flex justify-content-around py-4">
-           <div class="footer-columns ">
+  <!-- Contact -->
+  <section id="contact" class="bg-light">
+    <div class="container">
+      <h1 class="text-center mb-4"><b>Get In Touch</b></h1>
+      <div class="row gy-4 justify-content-center">
 
-       <h4 >Quick Links</h4>
-<ul class="link-list text-white">
-           <li><a href="#hero" class="text-white"> Home</a></li><br>
-            <li><a href="#about" class="text-white"> About</a></li><br>
-            <li><a href="#skills" class="text-white"> Skills</a></li><br>
-            <li><a href="#projects" class="text-white"> Projects</a></li><br>
-            <li><a href="#contact" class="text-white"> Contact</a></li><br>
-        </ul>
-        </ul>
-        </div>
- 
-         <div class="footer-columns">
-       <h4 >Connect Via</h4>
-       <ul class="contact-list">
-       <li><i class="fab fa-linkedin"></i>
-            <a href="https://linkedin.com/in/web-Deepa" class="text-white">LinkedIn
-          </a></li><br>
-
-       <li><i class="fab fa-github"></i>
-            <a href="https://github.com/Web-Deepa" class="text-white">GitHub
-          </a></li><br>
-<li><i class="fab fa-twitter"></i>
-            <a href="https://x.com/yourfrienddeepa" class="text-white">Twitter
-          </a></li><br>
-          <li><i class="fab fa-instagram"></i>
-                <a href="https://www.instagram.com/uniquedeepa12" class="text-white"> Instgram</a></li><br>
-                <li><i class="fab fa-facebook"></i>
-            <a href="https://facebook.com/uniquedeepa12" class="text-white">
-
-           Facebook</a></li><br>
-              <li> <i class="fab fa-tiktok"></i> 
-           <a href="https://www.tiktok.com/@unique_deepa" class="text-white">TikTok</a></li>
- </ul>
-         </div>
-         <div class="footer-columns text-white"> 
-            <h4> Documents</h4>
- <div class="documents-list">
-               <a href="deeparesume.pdf" class="text-white ms-2">Resume</a><br><br>
-               <a href ="#certificate" class="text-white ms-">Certificates </a>
-
+        <div class="col-md-4 col-12">
+          <div class="border border-black p-4 bg-white shadow h-100">
+            <h4 class="mb-3 text-center">Contact Me</h4>
+            <div class="contact-info">
+              <p><i class="fas fa-phone mx-2"></i> Phone<br>+977-9763277344</p>
+              <p><i class="fas fa-envelope mx-2"></i> Email<br>deepapaneru220@gmail.com</p>
+              <p><i class="fas fa-map-marker-alt mx-2"></i> Location<br>Dhangadhi, Kailali, Nepal</p>
             </div>
-         </div>
+          </div>
         </div>
 
+        <div class="col-md-6 col-12">
+          <div class="border border-black p-4 bg-white shadow">
+            <form id="contactForm">
+              <h4 class="mb-4">Have a query? Feel free to tell me.</h4>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Name" required>
+              </div>
+              <div class="mb-3">
+                <input type="email" class="form-control" placeholder="Email" required>
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Phone Number" required>
+              </div>
+              <div class="mb-3">
+                <textarea class="form-control" rows="4" placeholder="Your Message" required></textarea>
+              </div>
+              <div id="contactMessage" class="alert alert-success d-none text-center mb-3"></div>
+              <div class="text-center">
+                <button type="submit" class="btn btn-primary">Send Message <i class="fas fa-paper-plane"></i></button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-link shadow bg-white py-3 border-top border-danger">
+      <h4 class="text-center">Connect Via</h4>
+      <ul class="contact-list d-flex flex-wrap gap-3 justify-content-center align-items-center list-unstyled">
+        <li><a href="https://linkedin.com/in/uniquedeepa"><i class="link fab fa-linkedin fa-lg"></i></a></li>
+        <li><a href="https://github.com/Web-Deepa"><i class="link fab fa-github fa-lg"></i></a></li>
+        <li><a href="mailto:deepapaneru220@gmail.com"><i class="link fas fa-envelope fa-lg"></i></a></li>
+        <li><a href="https://x.com/yourfrienddeepa"><i class="link fab fa-twitter fa-lg"></i></a></li>
+        <li><a href="https://wa.me/9779763277344"><i class="link fab fa-whatsapp fa-lg"></i></a></li>
+        <li><a href="https://www.instagram.com/uniquedeepa12"><i class="link fab fa-instagram fa-lg"></i></a></li>
+        <li><a href="https://facebook.com/uniquedeepa12"><i class="link fab fa-facebook fa-lg"></i></a></li>
+      </ul>
+    </div>
+    <div class="footer-bottom border-top border-black shadow bg-white">
+      <div class="row justify-content-between">
+        <div class="col-auto"><p class="mb-0 p-2">© 2025 Deepa Paneru. All rights reserved.</p></div>
+        <div class="col-auto"><p class="mb-0 p-2">Designed by <a href="https://linkedin.com/in/uniquedeepa" class="text-decoration-none text-primary">Deepa</a> Made with <i class="bi bi-heart-fill text-danger"></i></p></div>
+      </div>
+    </div>
   </footer>
 
-  <div class="footer-bottom">
-<div class="row justify-content-between ">
-  <div class="col-auto">
-    <p class="mb-0 p-2">© 2025 Deepa Paneru. All rights reserved.</p>
-  </div>
-
-    <div class="col-auto">
-    <p class="mb-0 p-2
-    ">Designed by 
-      
-       <a href="https://www.linkedin.com/in/web-Deepa">Deepa</a>
-      <i class="  bi bi-heart-fill text-danger"></i>
-    </p>
-  </div>
-</div>
-</div>
-      
-
-
+  <script src="main.js"></script>
 </body>
 </html>
-
-
